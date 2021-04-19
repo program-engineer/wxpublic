@@ -14,3 +14,34 @@
 
 ​		cwRsync的架构很简单，有一个Server和多个Client组成。安装server版的cwRsync以后，在服务器上面启动cwRsync服务，然后在客户端上面执行文件同步命令即可实现文件同步功能。如果我们将文件同步命令添加到windows计划任务当中，就可实现定义同步的功能。
 
+服务器端配置：
+
+​		在cwRsync的安装目录下，可以找到一个rsyncd.conf的配置文件，下面为配置文件的修改方法：
+
+```bash
+use chroot = false
+strict modes = false
+hosts allow = *
+log file = rsyncd.log
+pid file = rsyncd.pid 
+port = 8173 #默认端口8173 
+uid = 0 #不指定uid，不加这一行将无法使用任何账户 
+gid = 0 #不指定gid 
+max connections = 10 #最大连接数10 
+
+
+# Module definitions
+# Remember cygwin naming conventions : c:\work becomes /cygwin/c/work
+#
+
+[config]
+path = /cygdrive/d/xxx/config #表示文件目录
+read only = false
+transfer logging = yes
+lock file = rsyncd.lock
+#auth users = service-scada #认证用户名
+#secrets file = rsync.password #认证用户的用户名和密码存储位置
+```
+
+​		在配置完毕以后，我们接下来就需要启动cwRsync的服务，我们将此服务设定为自动启动，如下图所示。
+

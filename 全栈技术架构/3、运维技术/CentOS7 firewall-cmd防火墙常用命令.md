@@ -1,10 +1,10 @@
-Centos7 使用的是filewall（-cmd）
+## Centos7 使用的是filewall（-cmd）
 
 iptables 用于过滤数据包，属于网络层防火墙。
 
 firewall 能够允许哪些服务可用，那些端口可用...属于更高一层的防火墙。
 
-1.firewalld的基本使用
+### 1.firewalld的基本使用
 
 启动：  systemctl start firewalld
 
@@ -24,7 +24,7 @@ firewall 能够允许哪些服务可用，那些端口可用...属于更高一�
 
 查看启动失败的服务列表：systemctl --failed
 
-2.配置firewalld-cmd
+### 2.配置firewalld-cmd
 
 查看版本： firewall-cmd --version
 
@@ -50,7 +50,7 @@ firewall 能够允许哪些服务可用，那些端口可用...属于更高一�
 
 
 
-3.通过firewall-cmd 开放端口
+### 3.通过firewall-cmd 开放端口
 
 firewall-cmd --zone=public --add-port=80/tcp --permanent   #作用域是public，开放tcp协议的80端口，一直有效
 
@@ -80,7 +80,7 @@ firewall-cmd --delete-service=<service>
 
  
 
-4.使用备忘
+### 4.使用备忘录
 
 firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.0.4/24" service name="http" accept'    //设置某个ip访问某个服务
 
@@ -104,7 +104,7 @@ firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=192.168.0.1:toport=808
 
 
 
-Centos7以前命令
+### Centos7以前命令
 
 1.开放80，22，8080 端口
 

@@ -58,12 +58,9 @@ chmod +x /home/ct.sh   #对脚本文件添加执行权限，否则不能执行
 
 新增 crontab  -e
 
-```
-30 1 * * * sh /home/mvp/osyunwei.sh    #表示每天凌晨1点30执行备份
+```bash
+30 1 * * * /bin/bash /home/ct.sh    #表示每天凌晨1点30执行备份
 :wq! #保存退出
-service crond stop
-service crond start
-*/1 * * * * /    每分钟执行一次
 ```
 
 

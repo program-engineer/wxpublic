@@ -1,8 +1,24 @@
 Local:  rsync [OPTION...] SRC... [DEST]
 
-Access via remote shell:  Pull: rsync [OPTION...] [USER@]HOST:SRC... [DEST]  Push: rsync [OPTION...] SRC... [USER@]HOST:DEST
+Access via remote shell:  
 
-Access via rsync daemon:  Pull: rsync [OPTION...] [USER@]HOST::SRC... [DEST]        rsync [OPTION...] rsync://[USER@]HOST[:PORT]/SRC... [DEST]  Push: rsync [OPTION...] SRC... [USER@]HOST::DEST        rsync [OPTION...] SRC... rsync://[USER@]HOST[:PORT]/DEST
+Pull: rsync [OPTION...] [USER@]HOST:SRC... [DEST]  
+
+Push: rsync [OPTION...] SRC... [USER@]HOST:DEST
+
+Access via rsync daemon:  
+
+Pull: 
+
+rsync [OPTION...] [USER@]HOST::SRC... [DEST]        
+
+rsync [OPTION...] rsync://[USER@]HOST[:PORT]/SRC... [DEST]  
+
+Push: 
+
+rsync [OPTION...] SRC... [USER@]HOST::DEST        
+
+rsync [OPTION...] SRC... rsync://[USER@]HOST[:PORT]/DEST
 
 其中，第一个路径参数一定是源文件路径，即作为同步基准的一方，可以同时指定多个源文件路径。最后一个路径参数则是目标文件路径，也就是待同步方。路径的格式可以是本地路径，也可以是使用user@host:path或user@host::path的远程路径，如果主机和path路径之间使用单个冒号隔开，表示使用的是远程shell通信方式，而使用双冒号隔开的则表示的是连接rsync daemon。另外，连接rsync daemon时，还提供了URL格式的路径表述方式rsync://user@host/path。
 
@@ -10,9 +26,19 @@ Access via rsync daemon:  Pull: rsync [OPTION...] [USER@]HOST::SRC... [DEST]    
 
 如果对rsync不熟悉，可暂先只了解本地以及远程shell格式的user@host:path路径格式。例如：
 
-[root@xuexi ~]# rsync /etc/fstab /tmp                # 在本地同步 [root@xuexi ~]# rsync -r /etc 172.16.10.5:/tmp       # 将本地/etc目录拷贝到远程主机的/tmp下，以保证远程/tmp目录和本地/etc保持同步 [root@xuexi ~]# rsync -r 172.16.10.5:/etc /tmp       # 将远程主机的/etc目录拷贝到本地/tmp下，以保证本地/tmp目录和远程/etc保持同步 [root@xuexi ~]# rsync /etc/                          # 列出本地/etc/目录下的文件列表 [root@xuexi ~]# rsync 172.16.10.5:/tmp/              # 列出远程主机上/tmp/目录下的文件列表 另外，使用rsync一定要注意的一点是，源路径如果是一个目录的话，带上尾随斜线和不带尾随斜线是不一样的，不带尾随斜线表示的是整个目录包括目录本身，带上尾随斜线表示的是目录中的文件，不包括目录本身。例如：
+[root@xuexi ~]# rsync /etc/fstab /tmp                # 在本地同步 
 
-[root@xuexi ~]# rsync -a /etc /tmp [root@xuexi ~]# rsync -a /etc/ /tmp 第一个命令会在/tmp目录下创建etc目录，而第二个命令不会在/tmp目录下创建etc目录，源路径/etc/中的所有文件都直接放在/tmp目录下。
+[root@xuexi ~]# rsync -r /etc 172.16.10.5:/tmp       # 将本地/etc目录拷贝到远程主机的/tmp下，以保证远程/tmp目录和本地/etc保持同步
+
+ [root@xuexi ~]# rsync -r 172.16.10.5:/etc /tmp       # 将远程主机的/etc目录拷贝到本地/tmp下，以保证本地/tmp目录和远程/etc保持同步 [root@xuexi ~]# rsync /etc/                          # 列出本地/etc/目录下的文件列表 
+
+[root@xuexi ~]# rsync 172.16.10.5:/tmp/              # 列出远程主机上/tmp/目录下的文件列表 另外，使用rsync一定要注意的一点是，源路径如果是一个目录的话，带上尾随斜线和不带尾随斜线是不一样的，不带尾随斜线表示的是整个目录包括目录本身，带上尾随斜线表示的是目录中的文件，不包括目录本身。例如：
+
+[root@xuexi ~]# rsync -a /etc /tmp 
+
+[root@xuexi ~]# rsync -a /etc/ /tmp 
+
+第一个命令会在/tmp目录下创建etc目录，而第二个命令不会在/tmp目录下创建etc目录，源路径/etc/中的所有文件都直接放在/tmp目录下。
 
 
 

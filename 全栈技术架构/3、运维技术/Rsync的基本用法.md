@@ -31,13 +31,18 @@ rsync [OPTION...] SRC... rsync://[USER@]HOST[:PORT]/DEST
 
 如果对rsync不熟悉，可暂先只了解本地以及远程shell格式的user@host:path路径格式。例如：
 
-[root@xuexi ~]# rsync /etc/fstab /tmp                # 在本地同步 
+```
+# 将本地/etc目录拷贝到远程主机的/tmp下，以保证远程/tmp目录和本地/etc保持同步
+[root@xuexi ~]# rsync -r /etc 172.16.10.5:/tmp   
+# 将远程主机的/etc目录拷贝到本地/tmp下，以保证本地/tmp目录和远程/etc保持同步 
+[root@xuexi ~]# rsync -r 172.16.10.5:/etc /tmp        
+# 列出本地/etc/目录下的文件列表 
+[root@xuexi ~]# rsync /etc/                          
+[root@xuexi ~]# rsync 172.16.10.5:/tmp/              # 列出远程主机上/tmp/目录下的文件列表
 
-[root@xuexi ~]# rsync -r /etc 172.16.10.5:/tmp       # 将本地/etc目录拷贝到远程主机的/tmp下，以保证远程/tmp目录和本地/etc保持同步
+```
 
- [root@xuexi ~]# rsync -r 172.16.10.5:/etc /tmp       # 将远程主机的/etc目录拷贝到本地/tmp下，以保证本地/tmp目录和远程/etc保持同步 [root@xuexi ~]# rsync /etc/                          # 列出本地/etc/目录下的文件列表 
-
-[root@xuexi ~]# rsync 172.16.10.5:/tmp/              # 列出远程主机上/tmp/目录下的文件列表 另外，使用rsync一定要注意的一点是，源路径如果是一个目录的话，带上尾随斜线和不带尾随斜线是不一样的，不带尾随斜线表示的是整个目录包括目录本身，带上尾随斜线表示的是目录中的文件，不包括目录本身。例如：
+ 另外，使用rsync一定要注意的一点是，源路径如果是一个目录的话，带上尾随斜线和不带尾随斜线是不一样的，不带尾随斜线表示的是整个目录包括目录本身，带上尾随斜线表示的是目录中的文件，不包括目录本身。例如：
 
 [root@xuexi ~]# rsync -a /etc /tmp 
 

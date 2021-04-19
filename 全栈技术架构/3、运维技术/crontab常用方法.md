@@ -1,4 +1,4 @@
-Crontab是Linux系统中在固定时间执行某一个程序的工具，类似于Windows系统中的任务计划程序。
+Crontab是Linux系统中在固定时间执行某一个程序的工具，类似于Windows系统中的任务计划程序。一般格式如下：
 
 ```bash
 # Example of job definition:

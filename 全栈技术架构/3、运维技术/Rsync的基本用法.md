@@ -1,24 +1,29 @@
-Local:  rsync [OPTION...] SRC... [DEST]
+## 基本用法
+
+Local:  rsync  [OPTION...]   SRC... [DEST]
 
 Access via remote shell:  
 
+```
 Pull: rsync [OPTION...] [USER@]HOST:SRC... [DEST]  
-
 Push: rsync [OPTION...] SRC... [USER@]HOST:DEST
+```
 
 Access via rsync daemon:  
 
 Pull: 
 
+```
 rsync [OPTION...] [USER@]HOST::SRC... [DEST]        
-
 rsync [OPTION...] rsync://[USER@]HOST[:PORT]/SRC... [DEST]  
+```
 
 Push: 
 
+```
 rsync [OPTION...] SRC... [USER@]HOST::DEST        
-
 rsync [OPTION...] SRC... rsync://[USER@]HOST[:PORT]/DEST
+```
 
 其中，第一个路径参数一定是源文件路径，即作为同步基准的一方，可以同时指定多个源文件路径。最后一个路径参数则是目标文件路径，也就是待同步方。路径的格式可以是本地路径，也可以是使用user@host:path或user@host::path的远程路径，如果主机和path路径之间使用单个冒号隔开，表示使用的是远程shell通信方式，而使用双冒号隔开的则表示的是连接rsync daemon。另外，连接rsync daemon时，还提供了URL格式的路径表述方式rsync://user@host/path。
 

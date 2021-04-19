@@ -62,7 +62,7 @@ lock file = rsyncd.lock
 ```
 1 c:
 2 cd C:\Program Files\cwRsync\bin
-3 rsync -av rsync://10.138.16.54:8173/config /cygdrive/d/xxx/config 
+3 rsync -av rsync://服务端IP:873/config  /cygdrive/d/xxx/config 
 ```
 
 ​		然后再将此记事本重命名为config_rsync.bat，就形成了一个批处理文件。在批处理文件中，之所以需要添加第1、2行，是因为在安装cwRsync客户端的时候，并没有将cwRsync的程序目录添加到path这个环境变量当中，如果在环境变量path当中添加C:\Program Files\cwRsync\bin，则不需要在批处理中添加第1、2行。

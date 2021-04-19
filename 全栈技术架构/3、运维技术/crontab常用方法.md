@@ -1,6 +1,6 @@
 Crontab是Linux系统中在固定时间执行某一个程序的工具，类似于Windows系统中的任务计划程序。
 
-```
+```bash
 # Example of job definition:
 # .---------------- minute (0 - 59)
 # |  .------------- hour (0 - 23)
@@ -22,7 +22,7 @@ service crond stop  #停止
 
 或者
 
-```
+```bash
 /etc/rc.d/init.d/crond start/stop/restart/reload
 /etc/rc.d/init.d/crond reload  #不中断服务，重新载入配置
 ```

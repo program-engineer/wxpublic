@@ -51,24 +51,20 @@ crontab -e   //编辑某个用户的cron服务
 
 三、设置任务计划
 
-/home/mvp/osyunwei.sh    #要自动执行的脚本程序路径
+```
+/home/ct.sh    #要自动执行的脚本程序路径
+chmod +x /home/ct.sh   #对脚本文件添加执行权限，否则不能执行
+```
 
-chmod +x /home/mvp/osyunwei.sh   #对脚本文件添加执行权限，否则不能执行
+新增 crontab  -e
 
-新增 crontab 
-
-30 1 * * * sh /home/mvp/osyunwei.sh #表示每天凌晨1点30执行备份
-
+```
+30 1 * * * sh /home/mvp/osyunwei.sh    #表示每天凌晨1点30执行备份
 :wq! #保存退出
-
-
 service crond stop
-
-
 service crond start
-
-
-*/1 * * * * /   每分钟执行一次
+*/1 * * * * /    每分钟执行一次
+```
 
 
 crontab文件的格式：

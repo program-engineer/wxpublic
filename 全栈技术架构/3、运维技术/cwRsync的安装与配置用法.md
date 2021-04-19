@@ -4,6 +4,8 @@
 
 ## 2.安装
 
-​		cwRsync的安装全部都是默认安装，对于服务器版本的安装，在安装过程中会提示要求我们输入Service account以及密码，如果我们不指定的话会使用SvcCWRSYNC这个账户，密码是随机生成的，所以要记住这个密码。但是在我后面的配置中，并没有用到这个Service account。
+​		cwRsync的安装全部都是默认安装，对于服务器版本的安装，在安装过程中会提示要求我们输入Service account以及密码，如果我们不指定的话会使用SvcCWRSYNC这个账户，密码是随机生成的，最好自己设置一个密码，在后面可能会用到。
 
-![img](https://images0.cnblogs.com/blog/80896/201310/11103143-f027e467c47a44c8b5c32af43789c03d.png)
+​		注意的两个点是：在服务启动时，如果失败，需要将启动账户密码更新一下，就是上面提到的。
+
+![img](https://i.loli.net/2021/04/19/uDP3YrmVOGMzEt7.png)

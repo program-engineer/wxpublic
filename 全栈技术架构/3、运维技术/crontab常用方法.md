@@ -14,7 +14,6 @@ Crontab是Linux系统中在固定时间执行某一个程序的工具，类似�
 一、安装crontab（一般情况下系统均自带）
 
 ```bash
-yum install vixie-cron  #安装
 chkconfig crond on     #设为开机启动，安装chkconfig（yum install chkconfig） ###设置启动方式
 service crond start  #启动
 service crond stop  #停止
@@ -23,8 +22,8 @@ service crond stop  #停止
 或者
 
 ```bash
-/etc/rc.d/init.d/crond start/stop/restart/reload
-/etc/rc.d/init.d/crond reload  #不中断服务，重新载入配置
+/etc/rc.d/init.d/crond  start/stop/restart/reload
+/etc/rc.d/init.d/crond  reload  #不中断服务，重新载入配置
 ```
 
 

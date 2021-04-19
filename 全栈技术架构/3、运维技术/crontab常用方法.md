@@ -12,13 +12,22 @@ Crontab是Linux系统中在固定时间执行某一个程序的工具，类似�
 ```
 
 一、安装crontab
+
+```
 yum install vixie-cron  #安装
 chkconfig crond on     #设为开机启动，安装chkconfig（yum install chkconfig）   ###设置启动方式
 service crond start  #启动
 service crond stop  #停止
+```
+
 或者
+
+```
 /etc/rc.d/init.d/crond start/stop/restart/reload
 /etc/rc.d/init.d/crond reload  #不中断服务，重新载入配置
+```
+
+
 
 二、crontab 参数的含义
 
@@ -43,9 +52,11 @@ crontab -e //编辑某个用户的cron服务
 三、设置任务计划
 
 /home/mvp/osyunwei.sh    #要自动执行的脚本程序路径
+
 chmod +x /home/mvp/osyunwei.sh   #对脚本文件添加执行权限，否则不能执行
 
 新增 crontab 
+
 30 1 * * * sh /home/mvp/osyunwei.sh #表示每天凌晨1点30执行备份
 
 :wq! #保存退出

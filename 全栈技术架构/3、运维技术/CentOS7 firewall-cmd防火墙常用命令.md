@@ -1,4 +1,5 @@
 Centos7 使用的是filewall（-cmd）
+
 iptables 用于过滤数据包，属于网络层防火墙。
 firewall 能够允许哪些服务可用，那些端口可用...属于更高一层的防火墙。
 

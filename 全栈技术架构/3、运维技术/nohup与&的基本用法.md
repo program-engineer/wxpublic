@@ -27,10 +27,10 @@
 一般两个一起用
 
 ```bash
-nohup command  >/dev/null &
+nohup command  >/dev/null 2&>1 &
 ```
 
-
+/dev/null  ：表示讲
 
 ### 3.查看运行的后台进程
 

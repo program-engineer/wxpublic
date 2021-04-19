@@ -24,7 +24,7 @@ strict modes = false
 hosts allow = *
 log file = rsyncd.log
 pid file = rsyncd.pid 
-port = 8173 #默认端口8173 
+port = 8173 #默认端口873 
 uid = 0 #不指定uid，不加这一行将无法使用任何账户 
 gid = 0 #不指定gid 
 max connections = 10 #最大连接数10 
@@ -43,5 +43,9 @@ lock file = rsyncd.lock
 #secrets file = rsync.password #认证用户的用户名和密码存储位置
 ```
 
-​		在配置完毕以后，我们接下来就需要启动cwRsync的服务，我们将此服务设定为自动启动，如下图所示。
+​		在配置完毕以后，我们接下来就需要启动cwRsync的服务，我们将此服务设定为自动启动，如下图所示：
+
+![img](https://i.loli.net/2021/04/19/61nAdVGBwDrkyEQ.png)
+
+​		还有，在上面我们指定RsyncServer的端口是873，我们可以通过netstat -an这个命令来检查873端口是否被监听，如下图所示：
 

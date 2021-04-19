@@ -66,7 +66,9 @@ chmod +x /home/ct.sh   #对脚本文件添加执行权限，否则不能执行
 
 crontab文件的格式：
 
+```
 minute    hour    day    month    weekday    username     command
+```
 
 minute：分，值为0-59
 
@@ -80,11 +82,11 @@ weekday：星期，值为0-6（0代表星期天，1代表星期一，以此类�
 
 username：要执行程序的用户，一般设置为sh
 
-command：要执行的程序路径（设置为绝对路径）例如：/home/mvp/osyunwei.sh
+command：要执行的程序路径（设置为绝对路径）例如：/home/ct.sh
 
-*/2 每隔2
+*/2  ：每隔2
 
-1-6 1到6
+1-6   ：1到6
 
 1,2,3,4  1、2、3、4
 

@@ -97,177 +97,203 @@ command：要执行的程序路径（设置为绝对路径）例如：/home/ct.s
 1、每天6:00执行
 
 ```
-0 6 * * * sh /home/mvp/osyunwei.sh
+0 6 * * * sh /home/ct.sh
 ```
 
 2、每周六凌晨4:00执行
 
-0 4 * * 6 sh /home/mvp/osyunwei.sh
+```
+0 4 * * 6 sh /home/ct.sh
+```
 
 3、每周六凌晨4:05执行
 
-5 4 * * 6 sh /home/mvp/osyunwei.sh 
+```
+5 4 * * 6 sh /home/ct.sh 
+```
 
 4、每周六凌晨4:15执行
 
-15 4 * * 6 sh /home/mvp/osyunwei.sh
+```
+15 4 * * 6 sh /home/ct.sh
+```
 
 5、每周六凌晨4:25执行
 
-25 4 * * 6 sh /home/mvp/osyunwei.sh
+```
+25 4 * * 6 sh /home/ct.sh
+```
 
 6、每周六凌晨4:35执行
 
-35 4 * * 6 sh /home/mvp/osyunwei.sh
+```
+35 4 * * 6 sh /home/ct.sh
+```
 
 7、每周六凌晨5:00执行
 
-5 * * 6 sh /home/mvp/osyunwei.sh
+```
+5 * * 6 sh /home/ct.sh
+```
 
 8、每天8:40执行
 
-40 8 * * * sh /home/mvp/osyunwei.sh
+```
+40 8 * * * sh /home/ct.sh
+```
 
 9、每天8:30执行
 
-30 8 * * * sh /home/mvp/osyunwei.sh
+```
+30 8 * * * sh /home/ct.sh
+```
 
 10、每周一到周五的11:41开始，每隔10分钟执行一次    #值得借鉴
 
-41,51 11 * * 1-5   sh /home/mvp/osyunwei.sh
+```
+41,51 11 * * 1-5   sh /home/ct.sh
+```
 
 或者
 
-1-59/10 12-23 * * 1-5   sh /home/mvp/osyunwei.sh
+```
+1-59/10 12-23 * * 1-5   sh /home/ct.sh
+```
 
 11、在每天的10:31开始，每隔2小时重复一次
 
-31 10-23/2 * * * sh   /home/mvp/osyunwei.sh
+```
+31 10-23/2 * * * sh   /home/ct.sh
+```
 
 12、每天15:00执行
 
-0 15 * * *  sh /home/mvp/osyunwei.sh
+```
+0 15 * * *  sh /home/ct.sh
+```
 
 13、每天的10:30开始，每隔2小时重复一次
 
-30 10-23/2 * * * sh  /home/mvp/osyunwei.sh
+30 10-23/2 * * * sh  /home/ct.sh
 
 14、每天15:30执行
 
-30 15 * * *  sh /home/mvp/osyunwei.sh
+30 15 * * *  sh /home/ct.sh
 
 15、每天17:50执行
 
-50 17 * * *  sh /home/mvp/osyunwei.sh
+50 17 * * *  sh /home/ct.sh
 
 16、每天8:00执行
 
-0 8 * * *  sh  /home/mvp/osyunwei.sh
+0 8 * * *  sh  /home/ct.sh
 
 17、每天18:00执行
 
-0 18 * * *  sh  /home/mvp/osyunwei.sh
+0 18 * * *  sh  /home/ct.sh
 
 18、每天8:30执行
 
-30 8 * * *  sh  /home/mvp/osyunwei.sh
+30 8 * * *  sh  /home/ct.sh
 
 19、每天20:30
 
-30 20 * * *  sh /home/mvp/osyunwei.sh
+30 20 * * *  sh /home/ct.sh
 
 20、每周一到周五2:00
 
-0 2 * * 1-5 sh /home/mvp/osyunwei.sh
+0 2 * * 1-5 sh /home/ct.sh
 
 21、每周一到周五9:30
 
-30 9 * * 1-5 sh /home/mvp/osyunwei.sh
+30 9 * * 1-5 sh /home/ct.sh
 
 22、每周一到周五8:00，每周一到周五9:00
 
-0 8,9 * * 1-5  sh /home/mvp/osyunwei.sh
+0 8,9 * * 1-5  sh /home/ct.sh
 
 23、每天23:59
 
-59 23 * * *  sh  /home/mvp/osyunwei.sh
+59 23 * * *  sh  /home/ct.sh
 
 24、每周六23:59
 
-59 23 * * 6  sh    /home/mvp/osyunwei.sh
+59 23 * * 6  sh    /home/ct.sh
 
 25、每天0:30
 
-30 0 * * *  sh  /home/mvp/osyunwei.sh
+30 0 * * *  sh  /home/ct.sh
 
 26、每周一到周五9:25到11:35之间、13:00到15:00之间，每隔10分钟运行一次
 
 分区段写值得借鉴
 
-25,35,45,55  9 * * 1-5  sh   /home/mvp/osyunwei.sh
+25,35,45,55  9 * * 1-5  sh   /home/ct.sh
 
-5-59/10  10 * * 1-5  sh   /home/mvp/osyunwei.sh
+5-59/10  10 * * 1-5  sh   /home/ct.sh
 
-5,15,25,35  11 * * 1-5  sh   /home/mvp/osyunwei.sh
+5,15,25,35  11 * * 1-5  sh   /home/ct.sh
 
-*/10  13-15 * * 1-5  sh   /home/mvp/osyunwei.sh
+*/10  13-15 * * 1-5  sh   /home/ct.sh
 
 27、每周一到周五8:30、8:50、9:30、10:00、10:30、11:00、11:30、13:30、14:00、14:30、5:00分别执行一次
 
-30,50 8 * * 1-5  sh  /home/mvp/osyunwei.sh
+30,50 8 * * 1-5  sh  /home/ct.sh
 
-30 9 * * 1-5  sh  /home/mvp/osyunwei.sh
+30 9 * * 1-5  sh  /home/ct.sh
 
-*/30 10-11 * * 1-5  sh  /home/mvp/osyunwei.sh
+*/30 10-11 * * 1-5  sh  /home/ct.sh
 
-30 13 * * 1-5  sh  /home/mvp/osyunwei.sh
+30 13 * * 1-5  sh  /home/ct.sh
 
-0,30 14-15 * * 1-5  sh  /home/mvp/osyunwei.sh
+0,30 14-15 * * 1-5  sh  /home/ct.sh
 
 28、每天23:50执行
 
-50 23 * * *  sh  /home/mvp/osyunwei.sh
+50 23 * * *  sh  /home/ct.sh
 
 29、每天10:00、16:00执行
 
-0 10,16 * * *  sh /home/mvp/osyunwei.sh
+0 10,16 * * *  sh /home/ct.sh
 
 30、每天5:30执行
 
-30 5 * * *  sh  /home/mvp/osyunwei.sh
+30 5 * * *  sh  /home/ct.sh
 
 31、每周一到周五9:30执行
 
-30 9 * * 1-5  sh  /home/mvp/osyunwei.sh
+30 9 * * 1-5  sh  /home/ct.sh
 
 32、每周一到周五13:00执行
 
-0 13 * * 1-5  sh  /home/mvp/osyunwei.sh
+0 13 * * 1-5  sh  /home/ct.sh
 
 33、每天7:51执行
 
-51 7 * * *  sh /home/mvp/osyunwei.sh
+51 7 * * *  sh /home/ct.sh
 
 34、每天7:53、12:40分别执行一次
 
-53 7 * * *  sh /home/mvp/osyunwei.sh
+53 7 * * *  sh /home/ct.sh
 
-40 12 * * *  sh /home/mvp/osyunwei.sh
+40 12 * * *  sh /home/ct.sh
 
 35、每天7:55执行
 
-55 7 * * *  sh  /home/mvp/osyunwei.sh
+55 7 * * *  sh  /home/ct.sh
 
 36、每天8:10、16:00、20:00分别执行一次
 
-10 8 * * *  sh  /home/mvp/osyunwei.sh
-
-0 16 * * *  sh  /home/mvp/osyunwei.sh
-
-0 20 * * *  sh  /home/mvp/osyunwei.sh
+```
+10 8 * * *  sh  /home/ct.sh
+0 16 * * *  sh  /home/ct.sh
+0 20 * * *  sh  /home/ct.sh
+```
 
 37、每天7:57、8:00分别执行一次
 
-57 7 * * *  sh  /home/mvp/osyunwei.sh
+```
+57 7 * * *  sh  /home/ct.sh
+0 8 * * *  sh  /home/ct.sh
+```
 
-0 8 * * *  sh  /home/mvp/osyunwei.sh

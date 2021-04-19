@@ -12,6 +12,8 @@
 
 ## 配置
 
+### 1.服务端
+
 ​		cwRsync的架构很简单，有一个Server和多个Client组成。安装server版的cwRsync以后，在服务器上面启动cwRsync服务，然后在客户端上面执行文件同步命令即可实现文件同步功能。如果我们将文件同步命令添加到windows计划任务当中，就可实现定义同步的功能。
 
 服务器端配置：
@@ -49,3 +51,6 @@ lock file = rsyncd.lock
 
 ​		还有，在上面我们指定RsyncServer的端口是873，我们可以通过netstat -an这个命令来检查873端口是否被监听，如下图所示：
 
+![img](https://i.loli.net/2021/04/19/2lqCKayhgXmswLB.png)
+
+### 2.客户端

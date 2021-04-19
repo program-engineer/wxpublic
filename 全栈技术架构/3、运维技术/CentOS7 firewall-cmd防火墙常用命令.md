@@ -102,7 +102,9 @@ firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=192.168.1.0.1 # 将80�
 
 firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=192.168.0.1:toport=8080 # 将80端口的流量转发至192.168.0.1的8080端口
 
-Centos7以前命令备忘
+
+
+Centos7以前命令
 
 1.开放80，22，8080 端口
 
@@ -114,23 +116,29 @@ Centos7以前命令备忘
 
 2.保存
 
+```
 /etc/rc.d/init.d/iptables save
+```
 
 3.查看打开的端口
 
+```
 /etc/init.d/iptables status
+```
 
 4.关闭防火墙 
 
 1） 永久性生效，重启后不会复原
 
+```
 开启： chkconfig iptables on
-
 关闭： chkconfig iptables off
+```
 
 2） 即时生效，重启后复原
 
+```
 开启： service iptables start
-
 关闭： service iptables stop
+```
 

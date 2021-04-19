@@ -26,10 +26,18 @@
 
 ```bash
 #一般两个一起用
-nohup command  >~/a.txt 2>&1 &
+nohup command  >/dev/null 2>&1 &
 ```
 
-/dev/null  ：表示讲
+/dev/null 代表空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息。
+
+\> 代表重定向到哪里
+
+1 表示stdout标准输出，系统默认值是1，所以">/dev/null"等同于"1>/dev/null"
+
+2 表示stderr标准错误
+
+& 表示等同于的意思，2>&1，表示2的输出重定向等同于1
 
 
 

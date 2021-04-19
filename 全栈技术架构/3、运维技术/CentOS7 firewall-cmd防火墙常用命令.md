@@ -1,11 +1,15 @@
 Centos7 使用的是filewall（-cmd）
 
 iptables 用于过滤数据包，属于网络层防火墙。
+
 firewall 能够允许哪些服务可用，那些端口可用...属于更高一层的防火墙。
 
 1.firewalld的基本使用
+
 启动：  systemctl start firewalld
-查看状态：systemctl status firewalld 
+
+查看状态：systemctl status firewalld
+
 停止：  systemctl disable firewalld
 禁用：  systemctl stop firewalld
 在开机时启用一个服务：systemctl enable firewalld.service

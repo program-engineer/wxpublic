@@ -22,8 +22,6 @@
 
 用途：在后台运行
 
-
-
 ```bash
 #一般两个一起用
 nohup command  >/dev/null 2>&1 &

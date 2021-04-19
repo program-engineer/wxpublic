@@ -31,18 +31,16 @@ service crond stop  #停止
 
 二、crontab 参数的含义
 
-【一般流程】 先crontab -l 查看当前 crontab 任务，
-
-删除或者新增都用  crontab -e
+【一般流程】 先crontab -l 查看当前 crontab 任务，删除或者新增都用  crontab -e
 
 
 cron服务提供crontab命令来设定cron服务的,详细参数如下
 
-crontab -u //设定某个用户的cron服务，一般sh用户在执行这个命令的时候需要此参数
+crontab -u  //设定某个用户的cron服务，一般sh用户在执行这个命令的时候需要此参数
 
-crontab -l //列出某个用户cron服务的详细内容
+crontab -l   //列出某个用户cron服务的详细内容
 
-crontab -e //编辑某个用户的cron服务
+crontab -e  //编辑某个用户的cron服务
 
 查看crontab 日志
 

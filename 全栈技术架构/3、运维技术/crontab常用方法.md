@@ -11,7 +11,7 @@ Crontab是Linux系统中在固定时间执行某一个程序的工具，类似�
 # *  *  *  *  * user-name  command to be executed
 ```
 
-一、安装crontab
+一、安装crontab（一般情况下系统均自带）
 
 ```bash
 yum install vixie-cron  #安装

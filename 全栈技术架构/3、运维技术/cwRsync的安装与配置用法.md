@@ -73,3 +73,9 @@ lock file = rsyncd.lock
 
 
 
+<h3>注意</h3>
+
+在Windows系统内若rsyncd.conf p
+
+
+

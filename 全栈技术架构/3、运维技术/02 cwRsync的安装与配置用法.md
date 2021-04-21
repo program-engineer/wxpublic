@@ -57,7 +57,7 @@ lock file = rsyncd.lock
 
 
 
-![image-20210421211828798](https://i.loli.net/2021/04/21/k63l2mndJSyoGrZ.png)
+
 
 ### 2.客户端
 

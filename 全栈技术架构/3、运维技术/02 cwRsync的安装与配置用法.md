@@ -51,7 +51,7 @@ lock file = rsyncd.lock
 
 ![img](https://i.loli.net/2021/04/19/61nAdVGBwDrkyEQ.png)
 
-还有，在上面我们指定RsyncServer的端口是8173，我们可以通过netstat -an这个命令来检查873端口是否被监听，如下图所示：
+还有，在上面我们指定RsyncServer的端口是8173，我们可以通过netstat -an这个命令来检查8173端口是否被监听，如下图所示：
 
 ![img](https://i.loli.net/2021/04/19/2lqCKayhgXmswLB.png)
 
@@ -73,7 +73,7 @@ lock file = rsyncd.lock
 
 然后再将此记事本重命名为config_rsync.bat，就形成了一个批处理文件。在批处理文件中，之所以需要添加第1、2行，是因为在安装cwRsync客户端的时候，并没有将cwRsync的程序目录添加到path这个环境变量当中，如果在环境变量path当中添加C:\Program Files\cwRsync\bin，则不需要在批处理中添加第1、2行。
 
-第三行"rsync -av rsync://服务端IP:8173/config /cygdrive/d/xxx/config"的含义是从服务器同步config文件，同步到本地的D:\xxx\config目录下面。同步会以server上面的版本为准，如果在fe上面存在同名文件会被替换。
+第三行"rsync -av rsync://服务端IP:8173/config /cygdrive/d/xxx/config"的含义是从服务器同步config文件，同步到本地的D:\xxx\config目录下面。同步会以server上面的版本为准，如果在本地存在同名文件会被替换。
 
 
 

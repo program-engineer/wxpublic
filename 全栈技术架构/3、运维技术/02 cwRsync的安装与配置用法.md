@@ -55,6 +55,10 @@ lock file = rsyncd.lock
 
 ![img](https://i.loli.net/2021/04/19/2lqCKayhgXmswLB.png)
 
+
+
+
+
 ### 2.客户端
 
 在安装完cwRsync的客户端以后，我们看到默认的安装目录是C:\Program Files\cwRsync，我们记下这个安装目录，后面会用到这个安装目录。

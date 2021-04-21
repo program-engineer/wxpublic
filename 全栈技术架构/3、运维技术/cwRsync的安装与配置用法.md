@@ -75,7 +75,7 @@ lock file = rsyncd.lock
 
 <h3>注意</h3>
 
-在Windows系统内若rsyncd.conf p
+在Windows系统内若rsyncd.conf 配置文件内有中文路径，需要将文件的格式转为UTF-8格式，否则可能出现错误。
 
 
 

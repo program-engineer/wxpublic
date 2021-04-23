@@ -14,6 +14,22 @@
 
 ![img](https://i.loli.net/2021/04/24/iNWDC8kBz9LYl7R.jpg)
 
+- **Prometheus 服务器**
+
+Prometheus Server 是 Prometheus组件中的核心部分，负责实现对监控数据的获取，存储以及查询。
+
+- **NodeExporter 业务数据源**
+
+业务数据源通过 Pull/Push 两种方式推送数据到 Prometheus Server。
+
+- **AlertManager 报警管理器**
+
+Prometheus 通过配置报警规则，如果符合报警规则，那么就将报警推送到 AlertManager，由其进行报警处理。
+
+- **可视化监控界面**
+
+Prometheus 收集到数据之后，由 WebUI 界面进行可视化图标展示。目前我们可以通过自定义的 API 客户端进行调用数据展示，也可以直接使用 Grafana 解决方案来展示。
+
 ### 三、主要特征
 
 1. 多维度数据模型

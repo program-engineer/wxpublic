@@ -8,7 +8,7 @@
 
 （1）使用 **docker export** 命令根据容器 **ID** 将镜像导出成一个文件。
 
-```
+```bash
 docker export 容器ID > server.tar
 ```
 
@@ -19,7 +19,7 @@ docker export 容器ID > server.tar
 
 （1）使用 **docker import** 命令则可将这个镜像文件导入进来。
 
-```
+```bash
 docker import - new__server < server.tar
 ```
 
@@ -37,13 +37,13 @@ docker import - new__server < server.tar
 
 （1）下面使用 **docker save** 命令根据 **ID** 将镜像保存成一个文件。
 
-```
+```bash
 docker save 0fdf2b4c26d3 > hangge_server.tar
 ```
 
 （2）我们还可以同时将多个 **image** 打包成一个文件，比如下面将镜像库中的 **postgres** 和 **mongo** 打包：
 
-```
+```bash
 docker save -o images.tar postgres:9.6 mongo:3.4
 ```
 
@@ -51,6 +51,8 @@ docker save -o images.tar postgres:9.6 mongo:3.4
 
 使用 **docker load** 命令则可将这个镜像文件载入进来。
 
-```
+```bash
 docker load < hangge_server.tar
 ```
+
+## 附：两种方案的差别

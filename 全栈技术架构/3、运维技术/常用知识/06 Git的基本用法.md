@@ -46,7 +46,7 @@ Enter same passphrase again:   #再次确认密码（可以为空）
 
 登录GitHub系统；点击右上角账号头像的→Settings→SSH and GPG keys→New SSH key。
 
-![img](https://img-blog.csdn.net/20161213133340897)
+![img](C:/Users/dgf/Pictures/Camera%20Roll/20161213133340897.png)
 
 4：配置账户
 
@@ -108,5 +108,5 @@ $ git push -u origin master
 
 ## 2.Git常用命令
 
-![git速查表下载app](https://i.loli.net/2021/05/05/HY5lfWvAPu6Frqy.png)
+![git速查表下载app](C:/Users/dgf/Pictures/Camera%20Roll/HY5lfWvAPu6Frqy.png)
 

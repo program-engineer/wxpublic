@@ -54,8 +54,8 @@ SC命令详解(一个很有用的command)
 
 **一.SC使用这样的语法：**
 
-\1. SC [Servername] command Servicename [Optionname= Optionvalues] 
-\2. SC [command] 
+1. SC [Servername] command Servicename [Optionname= Optionvalues] 
+2. SC [command] 
 这里使用第一种语法使用SC，使用第二种语法显示帮助。 
 下面介绍各种参数。 
 Servername 

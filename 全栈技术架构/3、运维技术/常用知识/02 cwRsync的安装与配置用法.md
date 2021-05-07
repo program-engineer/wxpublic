@@ -81,5 +81,9 @@ lock file = rsyncd.lock
 
 在Windows系统内若rsyncd.conf 配置文件内有中文路径，需要将文件的格式转为UTF-8格式，否则可能出现错误。
 
+或者
+
+ 在服务器上rsync.conf 中增加配置 charset = GBK
+
 
 
